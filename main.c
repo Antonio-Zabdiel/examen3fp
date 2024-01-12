@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<string.h>
 #include <stdlib.h>
-#include <math.h>
 #include <time.h>
 
 #define nTres 3
@@ -53,8 +52,64 @@ int menu(){
 
 //funcion de la opcion 1
 void opc1(){
+    int i;
+
+    for (i = 0; i < nTres; i++){
+        llenar_arrx_opc1(i);
+    }
+
+    printear_arrays_opc1();
 
 }
+
+//rellenar primeros tres arrays de la opcion uno
+void llenar_arrx_opc1(int i){
+    int j, n;
+
+    if (i = 0){
+        for (j = 0; j < nCinco; j++){
+            printf("ingrese un dato: \n");
+            scanf("%d", &n);
+            arr_opc1_1[i] = n;
+        }
+        
+    } else if(i = 1) {
+        for (j = 0; j < nCinco; j++){
+            printf("ingrese un dato: \n");
+            scanf("%d", &n);
+            arr_opc1_2[i] = n;
+        }
+    } else {
+        for (j = 0; j < nCinco; j++){
+            printf("ingrese un dato: \n");
+            scanf("%d", &n);
+            arr_opc1_3[i] = n;
+        }
+    }
+    
+}
+
+//ahora ocupo printear los 3 arrays
+void printear_arrays_opc1(){
+    int i;
+
+    printf("\narray 1: ");
+    for (i = 0; i < nCinco; i++){
+        printf("%d ",arr_opc1_1[i]);
+    }
+    printf("\narray 2: ");
+    for (i = 0; i < nCinco; i++){
+        printf("%d",arr_opc1_2[i]);
+    }
+    printf("\narray 3: ");
+    for (i = 0; i < nCinco; i++){
+        printf("%d",arr_opc1_3[i]);
+    }
+    printf("\n=====================================================");
+}
+
+
+
 
 //funcion de la opcion 2
 //genera un array random y le cambia el dato de una cordenada
